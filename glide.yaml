@@ -1,0 +1,4 @@
+package: github.com/belfazt/example-app
+import:
+- package: go.uber.org/fx
+  version: ^1
