@@ -2,8 +2,12 @@ package mux
 
 import (
 	"context"
+	"fmt"
 	"log"
 	"net/http"
+	"os"
+
+	_ "github.com/joho/godotenv/autoload"
 
 	"go.uber.org/fx"
 )
@@ -42,7 +46,7 @@ func NewMux(lc fx.Lifecycle, logger *log.Logger) *http.ServeMux {
 	// until all handlers are registered.
 	mux := http.NewServeMux()
 	server := &http.Server{
-		Addr:    ":8080",
+		Addr:    fmt.Sprintf(":%s", os.Getenv("PORT")),
 		Handler: mux,
 	}
 	// If NewMux is called, we know that another function is using the mux. In

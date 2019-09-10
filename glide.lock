@@ -1,6 +1,10 @@
-hash: ae40ede26c48861e1ba8d382940649a800de482e978cb42a4598404753f9c7ce
-updated: 2019-09-09T11:17:36.016979-05:00
+hash: ab6ec0d9b0d9b1f17df9f308c014f6417b2d7b3c7de71452c92df69c75e40220
+updated: 2019-09-10T10:55:25.659773-05:00
 imports:
+- name: github.com/joho/godotenv
+  version: 23d116af351c84513e1946b527c88823e476be13
+  subpackages:
+  - autoload
 - name: go.uber.org/atomic
   version: df976f2515e274675050de7b3f42545de80594fd
 - name: go.uber.org/dig
